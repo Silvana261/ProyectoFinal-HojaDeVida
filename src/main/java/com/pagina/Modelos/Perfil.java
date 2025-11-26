@@ -1,7 +1,9 @@
 package com.pagina.Modelos;
-
 import java.util.List;
 
+/**
+ * Modelo que representa al perfil con los datos de la persona de la hoja de vida
+ */
 public class Perfil {
     private List<Habilidad> habilidades;
     private String nombre;
