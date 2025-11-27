@@ -8,7 +8,7 @@ import java.util.List;
 public interface IRepositorioHabilidad {
 
     /**
-     * Carga y devuelve la lista de habilidaddes completa desde el archivo JSON
+     * Carga y devuelve la lista de habilidades completa desde el archivo JSON
      * @return la lista de habilidades
      */
     List<Habilidad> obtener();
