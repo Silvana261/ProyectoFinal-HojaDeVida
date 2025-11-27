@@ -6,7 +6,9 @@
     xmlns:xml="http://www.w3.org/XML/1998/namespace"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+
   <display-name>Archetype Created Web Application</display-name>
+
   <servlet>
     <servlet-name>Servelets</servlet-name>
     <servlet-class>com.pagina.Servelets</servlet-class>
@@ -16,4 +18,10 @@
     <servlet-name>Servelets</servlet-name>
     <url-pattern>/hola</url-pattern>
   </servlet-mapping>
+
+  <!-- AQUI LO NUEVO -->
+  <welcome-file-list>
+      <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+
 </web-app>
