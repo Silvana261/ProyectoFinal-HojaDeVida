@@ -1,6 +1,7 @@
 package com.pagina.Servlets;
 import java.io.IOException;
 import com.pagina.Interfaces.IGestorPerfil;
+import com.pagina.LogicaDelNegocio.GestorPerfil;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
