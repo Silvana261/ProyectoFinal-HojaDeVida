@@ -2,6 +2,9 @@ package com.pagina.Interfaces;
 import com.pagina.Modelos.Habilidad;
 import java.util.List;
 
+/**
+ * Esta interfaz se encarga de las operaciones que se realizan sobre las habilidades
+ */
 public interface IGestorHabilidad {
 
     /**

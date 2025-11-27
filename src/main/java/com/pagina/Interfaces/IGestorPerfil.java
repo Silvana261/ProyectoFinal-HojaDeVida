@@ -1,6 +1,10 @@
 package com.pagina.Interfaces;
 import com.pagina.Modelos.Perfil;
 
+
+/**
+ * Esta interfaz se encarga de definir las operaciones que se realizan al perfil
+ */
 public interface IGestorPerfil {
 
     /**
