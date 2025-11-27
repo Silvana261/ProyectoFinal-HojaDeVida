@@ -1,0 +1,11 @@
+com\pagina\Modelos\Habilidad.class
+com\pagina\Modelos\Perfil.class
+com\pagina\Interfaces\IGestorHabilidad.class
+com\pagina\Persistencia\PerfilRepositorio.class
+com\pagina\LogicaDelNegocio\GestorHabilidad.class
+com\pagina\Interfaces\IRepositorioHabilidad.class
+com\pagina\LogicaDelNegocio\GestorPerfil.class
+com\pagina\Persistencia\HabilidadRepositorio$1.class
+com\pagina\Interfaces\IRepositorioPerfil.class
+com\pagina\Interfaces\IGestorPerfil.class
+com\pagina\Persistencia\HabilidadRepositorio.class
