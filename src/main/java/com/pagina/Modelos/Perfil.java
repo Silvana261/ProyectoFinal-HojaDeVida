@@ -13,6 +13,33 @@ public class Perfil {
     private String foto;
     private String banner;
 
+    /**
+     * Constructor vacío por defecto
+     */
+    public Perfil (){
+
+    }
+
+    /**
+     * Constructor para la instancia de un perfil
+     * @param nombre nombre del perfil
+     * @param bio bio del perfil
+     * @param experiencia experiencia del perfil (hoja de vida)
+     * @param email email del perfil
+     * @param foto ruta de la foto del perfil
+     * @param banner banner de la foto del perfil
+     * @param habilidades lista de habilidades del perfil
+     */
+    public Perfil (String nombre, String bio, String experiencia, String email, String foto, String banner, List<Habilidad> habilidades){
+        this.nombre = nombre;
+        this.bio = bio;
+        this.experiencia = experiencia;
+        this.email = email;
+        this.foto = foto;
+        this.banner = banner;
+        this.habilidades = habilidades;
+    }
+
     // Getters y setters
     public List<Habilidad> getHabilidades() {
         return habilidades;

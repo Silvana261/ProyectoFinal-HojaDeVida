@@ -1,6 +1,7 @@
 package com.pagina.Servlets;
 import java.io.IOException;
 import com.pagina.Interfaces.IGestorHabilidad;
+import com.pagina.LogicaDelNegocio.GestorHabilidad;
 import com.pagina.Modelos.Habilidad;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -8,11 +9,34 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
+
+
+/**
+ * Servlet asociado a la URL /habilidad.
+ * La anotación @WebServlet("/habilidad") registra este servlet para que
+ * cualquier petición a esa ruta sea manejada por esta clase.
+ */
 @WebServlet("/habilidad")
+
+
+/**
+ * Servlet que maneja las operaciones relacionadas con las habilidades del único perfil.
+ * Este servlet utiliza un IGestorHabilidad para interactuar con la lógica de negocio
+ * de las habilidades, incluyendo el agregar, eliminar y editar una habilidad, así como listar las habilidades
+ */
 public class HabilidadServidor extends HttpServlet {
 
+    // Gestor de habilidad que contiene la lógica de negocio y persistencia
     private IGestorHabilidad gestor = new GestorHabilidad();
 
+
+    /**
+     * Maneja las solicitudes GET al servlet.
+     * Obtiene las habilidades mediante el gestor y lo coloca como atributo
+     * en la solicitud, luego redirige a la vista JSP para mostrar los datos.
+     * @param request  Objeto HttpServletRequest que contiene la información de la solicitud
+     * @param response Objeto HttpServletResponse para enviar la respuesta al cliente
+     */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -21,6 +45,15 @@ public class HabilidadServidor extends HttpServlet {
         request.getRequestDispatcher("/vista/habilidades.jsp").forward(request, response);
     }
 
+
+    /**
+     * Maneja las solicitudes POST al servlet.
+     * Este método recibe un parámetro "accion" que determina qué atributo de las habilidades
+     * se debe modificar, y luego llama al método correspondiente del gestor.
+     * Finalmente, redirige a la misma página para reflejar los cambios.
+     * @param request  Objeto HttpServletRequest que contiene la información de la solicitud
+     * @param response Objeto HttpServletResponse para enviar la respuesta al cliente
+     */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
@@ -34,7 +67,7 @@ public class HabilidadServidor extends HttpServlet {
             gestor.agregarHabilidad(h);
 
         } else if ("editar".equals(accion) && nombre != null && nombreNuevo != null) {
-            // Solo mandas la habilidad nueva al gestor
+            // Solo manda la habilidad nueva al gestor
             Habilidad hNueva = new Habilidad(nombreNuevo);
             gestor.editarHabilidad(hNueva);
 
@@ -43,6 +76,8 @@ public class HabilidadServidor extends HttpServlet {
             gestor.eliminarHabilidad(h);
         }
 
+
+        // Después de cualquier cambio, recargar la página
         response.sendRedirect("habilidades");
     }
 }
