@@ -3,10 +3,10 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Hoja de vida - Prueba</title>
+    <title>Hoja de vida hola soy silvana</title>
     <style> body { font-family: Arial, Helvetica, sans-serif; padding: 40px; }</style>
 </head>
 <body>
-    hoja de vida
+    hoja de vida jajajajaj
 </body>
 </html>
