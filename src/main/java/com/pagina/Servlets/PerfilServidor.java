@@ -24,7 +24,7 @@ import jakarta.servlet.http.HttpServletResponse;
 public class PerfilServidor extends HttpServlet {
 
     
-     // Gestor de perfil que contiene la lógica de negocio y persistencia
+    
     private IGestorPerfil gestor = new GestorPerfil();
 
 
