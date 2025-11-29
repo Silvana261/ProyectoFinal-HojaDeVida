@@ -20,10 +20,31 @@ public class InicioServidor extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws IOException {
 
-        // Redireccionar a /perfil
-        response.sendRedirect("perfil");
+        String ruta = request.getParameter("page");
+
+        if (ruta == null || ruta.isEmpty()) {
+            response.sendRedirect("perfil");   // Página por defecto
+            return;
+        }
+
+        switch (ruta) {
+            case "perfil":
+                response.sendRedirect("perfil");
+                break;
+
+            case "habilidades":
+                response.sendRedirect("habilidad");
+                break;
+
+            case "config":
+                response.sendRedirect("configuracion");
+                break;
+
+            default:
+                response.sendRedirect("perfil"); // En caso de ruta no válida
+        }
     }
 }
 
