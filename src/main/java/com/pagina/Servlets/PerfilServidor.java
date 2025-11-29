@@ -1,6 +1,7 @@
 package com.pagina.Servlets;
 import java.io.IOException;
 import com.pagina.Interfaces.IGestorPerfil;
+import com.pagina.LogicaDelNegocio.GestorPerfil;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -23,7 +24,7 @@ import jakarta.servlet.http.HttpServletResponse;
 public class PerfilServidor extends HttpServlet {
 
     
-     // Gestor de perfil que contiene la lógica de negocio y persistencia
+    
     private IGestorPerfil gestor = new GestorPerfil();
 
 
@@ -39,7 +40,7 @@ public class PerfilServidor extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         request.setAttribute("perfil", gestor.obtenerPerfil());
-        request.getRequestDispatcher("/vista/perfil.jsp").forward(request, response);
+        request.getRequestDispatcher("/src/main/webapp/index.jsp").forward(request, response);
     }
 
 
