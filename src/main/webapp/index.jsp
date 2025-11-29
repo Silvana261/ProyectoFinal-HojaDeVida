@@ -62,15 +62,64 @@
                     Habilidades
                 </div>
                 <div class="habilidades-list">
-                    <% if (habilidades != null && !habilidades.isEmpty()) { %>
+                    <% if (habilidades !=null && !habilidades.isEmpty()) { %>
                         <% for (Habilidad h : habilidades) { %>
-                            <span class="skill-badge"><%= h.getNombre() %></span>
-                        <% } %>
-                    <% } else { %>
-                        <p class="text-muted">No hay habilidades registradas</p>
-                    <% } %>
+                            <div class="skill-item d-flex align-items-center mb-1">
+                                <span class="skill-badge me-2">
+                                    <%= h.getNombre() %>
+                                </span>
+            
+                                <!-- Botón Editar -->
+                                <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal"
+                                    data-bs-target="#editarHabilidadModal<%= h.getNombre().replaceAll(" \\s","") %>">
+                                    <i class="bi bi-pencil"></i>
+                                </button>
+            
+                                <!-- Botón Eliminar -->
+                                <form action="habilidades" method="POST" style="display:inline;">
+                                    <input type="hidden" name="accion" value="eliminar">
+                                    <input type="hidden" name="nombre" value="<%= h.getNombre() %>">
+                                    <button type="submit" class="btn btn-sm btn-outline-danger">
+                                        <i class="bi bi-trash"></i>
+                                    </button>
+                                </form>
+                            </div>
+            
+                            <!-- Modal Editar Habilidad -->
+                            <div class="modal fade" id="editarHabilidadModal<%= h.getNombre().replaceAll(" \\s","") %>"
+                                tabindex="-1">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Editar Habilidad</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <form action="habilidades" method="POST">
+                                            <div class="modal-body">
+                                                <input type="hidden" name="accion" value="editar">
+                                                <input type="hidden" name="nombre" value="<%= h.getNombre() %>">
+                                                <div class="mb-3">
+                                                    <label class="form-label">Nombre nuevo</label>
+                                                    <input type="text" name="nombreNuevo" class="form-control"
+                                                        value="<%= h.getNombre() %>" required>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-bs-dismiss="modal">Cancelar</button>
+                                                <button type="submit" class="btn btn-primary">Guardar</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <% } %>
+                                <% } else { %>
+                                    <p class="text-muted">No hay habilidades registradas</p>
+                                    <% } %>
                 </div>
             </div>
+
             
             <!-- BOTONES DE ACCIÓN -->
             <div class="section">
