@@ -19,7 +19,7 @@ import java.util.List;
  */
 public class PerfilRepositorio implements IRepositorioPerfil {
 
-    private static final String ARCHIVO = "/perfil.json";
+    private static final String ARCHIVO = "perfil.json";
     private Gson gson;
 
     /**

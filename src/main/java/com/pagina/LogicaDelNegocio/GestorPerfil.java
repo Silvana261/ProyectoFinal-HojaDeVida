@@ -13,14 +13,7 @@ import com.pagina.Persistencia.PerfilRepositorio;
 public class GestorPerfil implements IGestorPerfil {
 
     private IRepositorioPerfil repositorioPerfil;
-     /**
-     * Constructor de GestorPerfil.
-     * 
-     * @param repositorioPerfil Repositorio donde se almacenará y obtendrá el perfil.
-     */
-    public GestorPerfil(IRepositorioPerfil repositorioPerfil) {
-        this.repositorioPerfil = repositorioPerfil;
-    }
+     
 
     /**
      * Constructor por defecto que crea un PerfilRepositorio concreto.
