@@ -16,7 +16,7 @@ import jakarta.servlet.http.HttpServletResponse;
  * La anotación @WebServlet("/habilidad") registra este servlet para que
  * cualquier petición a esa ruta sea manejada por esta clase.
  */
-@WebServlet("/habilidad")
+@WebServlet("/habilidades")
 
 
 /**
@@ -42,7 +42,7 @@ public class HabilidadServidor extends HttpServlet {
             throws ServletException, IOException {
         // Listar todas las habilidades
         request.setAttribute("habilidades", gestor.listarHabilidades());
-        request.getRequestDispatcher("/vista/habilidades.jsp").forward(request, response);
+        request.getRequestDispatcher("habilidades").forward(request, response);
     }
 
 

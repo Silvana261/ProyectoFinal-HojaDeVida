@@ -5,23 +5,7 @@
 
 <%
     Perfil perfil = (Perfil) request.getAttribute("perfil");
-    if (perfil == null) {
-        perfil = new Perfil();
-        perfil.setNombre("Mi Hoja de Vida");
-        perfil.setBio("Profesional dedicado y comprometido con la excelencia");
-        perfil.setExperiencia("5 años en desarrollo de software");
-        perfil.setEmail("usuario@example.com");
-        perfil.setFoto("https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face");
-        perfil.setBanner("Imagenes/banner.jpg");
-    }
-    
     List<Habilidad> habilidades = perfil.getHabilidades();
-    if (habilidades == null || habilidades.isEmpty()) {
-        habilidades = new java.util.ArrayList<>();
-        habilidades.add(new Habilidad("Java"));
-        habilidades.add(new Habilidad("SQL"));
-        habilidades.add(new Habilidad("HTML/CSS"));
-    }
 %>
 
 <!DOCTYPE html>
@@ -146,7 +130,7 @@
                     <h5 class="modal-title">Agregar Habilidad</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
-                <form action="habilidad" method="POST">
+                <form action="habilidades" method="POST">
                     <div class="modal-body">
                         <div class="mb-3">
                             <label class="form-label">Nombre de la Habilidad</label>
