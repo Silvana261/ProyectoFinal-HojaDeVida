@@ -9,6 +9,10 @@
 
   <display-name>Archetype Created Web Application</display-name>
 
+  <servlet>
+        <servlet-name>PerfilServidor</servlet-name>
+        <servlet-class>com.pagina.Servlets.PerfilServidor</servlet-class>
+    </servlet>
   <!-- AQUI LO NUEVO -->
   <welcome-file-list>
       <welcome-file>index.jsp</welcome-file>
