@@ -13,7 +13,7 @@ Antes de empezar, asegúrate de tener instalados:
 1. Abrir el proyecto en un IDE  
 2. Añadir el proyecto a Tomcat. (En caso de ser VS code, se debe añadir Tomcat como server y en “add deployment” agregar el archivo hojadevida.war)  
    ![][image1]  
-3. Empezar el servidor  
+3. Empezar el servidor (clic -> start) 
 4. Una vez que Tomcat esté listo, abre la página en el navegador y accede a [http://localhost:8080/hojadevida/](http://localhost:8080/hojadevida/)    
 5. Listo\! Ya se debe ver la hoja de vida  
      
