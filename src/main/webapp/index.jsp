@@ -7,12 +7,12 @@
     Perfil perfil = (Perfil) request.getAttribute("perfil");
     if (perfil == null) {
         perfil = new Perfil();
-        perfil.setNombre("Perfil");
-        perfil.setBio("Cargando...");
-        perfil.setExperiencia("Cargando...");
-        perfil.setEmail("contacto@example.com");
-        perfil.setFoto("https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop");
-        perfil.setBanner("https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&h=300&fit=crop");
+        perfil.setNombre("Mi Hoja de Vida");
+        perfil.setBio("Profesional dedicado y comprometido con la excelencia");
+        perfil.setExperiencia("5 años en desarrollo de software");
+        perfil.setEmail("usuario@example.com");
+        perfil.setFoto("https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face");
+        perfil.setBanner("Imagenes/banner.jpg");
     }
     
     List<Habilidad> habilidades = perfil.getHabilidades();
@@ -32,7 +32,7 @@
     <title>Hoja de Vida - <%= perfil.getNombre() %></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/Estilos.css">
 </head>
 
 <body>
@@ -163,6 +163,6 @@
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
-
