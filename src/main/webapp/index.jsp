@@ -7,12 +7,12 @@
     Perfil perfil = (Perfil) request.getAttribute("perfil");
     if (perfil == null) {
         perfil = new Perfil();
-        perfil.setNombre("Mi Hoja de Vida");
-        perfil.setBio("Profesional dedicado y comprometido con la excelencia");
-        perfil.setExperiencia("5 años en desarrollo de software");
-        perfil.setEmail("usuario@example.com");
-        perfil.setFoto("Imagenes/foto.jpg");
-        perfil.setBanner("Imagenes/banner.jpg");
+        perfil.setNombre("Perfil");
+        perfil.setBio("Cargando...");
+        perfil.setExperiencia("Cargando...");
+        perfil.setEmail("contacto@example.com");
+        perfil.setFoto("https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop");
+        perfil.setBanner("https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&h=300&fit=crop");
     }
     
     List<Habilidad> habilidades = perfil.getHabilidades();
@@ -32,142 +32,7 @@
     <title>Hoja de Vida - <%= perfil.getNombre() %></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-    <style>
-        :root {
-            --primary: #0d6efd;
-            --secondary: #6c757d;
-        }
-        
-        body {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px 0;
-        }
-        
-        .perfil-container {
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            overflow: hidden;
-            margin-bottom: 30px;
-        }
-        
-        .banner {
-            width: 100%;
-            height: 250px;
-            background-size: cover;
-            background-position: center;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            position: relative;
-        }
-        
-        .foto-perfil {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            border: 8px solid white;
-            margin-top: -90px;
-            object-fit: cover;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-            background-color: #e9ecef;
-        }
-        
-        .info-header {
-            padding: 20px 30px;
-            text-align: center;
-        }
-        
-        .info-header h1 {
-            margin: 20px 0 10px;
-            color: #2c3e50;
-            font-weight: 700;
-        }
-        
-        .info-header p {
-            color: #667eea;
-            font-size: 16px;
-            margin: 5px 0;
-        }
-        
-        .email-info {
-            color: #666;
-            font-size: 14px;
-            margin-top: 10px;
-        }
-        
-        .section {
-            padding: 30px;
-            border-bottom: 1px solid #e9ecef;
-        }
-        
-        .section:last-child {
-            border-bottom: none;
-        }
-        
-        .section-title {
-            font-size: 20px;
-            font-weight: 600;
-            color: #2c3e50;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .section-title i {
-            color: #667eea;
-            font-size: 24px;
-        }
-        
-        .bio-text {
-            color: #555;
-            line-height: 1.6;
-            font-size: 15px;
-        }
-        
-        .experiencia-text {
-            color: #555;
-            line-height: 1.6;
-            font-size: 15px;
-        }
-        
-        .habilidades-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        
-        .skill-badge {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 500;
-            display: inline-block;
-        }
-        
-        .botones-accion {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 30px;
-            justify-content: center;
-        }
-        
-        .btn-accion {
-            padding: 10px 20px;
-            border-radius: 8px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            border: none;
-        }
-        
-        .btn-accion:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
-        }
-    </style>
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
