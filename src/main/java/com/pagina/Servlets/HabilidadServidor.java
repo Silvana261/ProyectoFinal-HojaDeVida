@@ -78,6 +78,6 @@ public class HabilidadServidor extends HttpServlet {
 
 
         // Después de cualquier cambio, recargar la página
-        response.sendRedirect("habilidades");
+        response.sendRedirect("perfil");
     }
 }
