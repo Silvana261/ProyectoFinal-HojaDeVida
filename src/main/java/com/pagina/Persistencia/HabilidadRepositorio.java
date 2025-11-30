@@ -37,6 +37,7 @@ public class HabilidadRepositorio implements IRepositorioHabilidad {
         }
     }
 
+    @Override
     public List<Habilidad> obtener() {
         try (FileReader reader = new FileReader(ARCHIVO_HABILIDADES)) {
             List<Habilidad> lista = gson.fromJson(reader, tipoLista);
@@ -51,6 +52,7 @@ public class HabilidadRepositorio implements IRepositorioHabilidad {
         }
     }
 
+    @Override
     public void guardar(List<Habilidad> lista) {
         try (FileWriter writer = new FileWriter(ARCHIVO_HABILIDADES)) {
             gson.toJson(lista, writer);

@@ -19,7 +19,7 @@ import java.util.List;
  */
 public class PerfilRepositorio implements IRepositorioPerfil {
 
-    private static final String ARCHIVO = "/perfil.json";
+    private static final String ARCHIVO = "perfil.json";
     private Gson gson;
 
     /**
@@ -64,23 +64,23 @@ public class PerfilRepositorio implements IRepositorioPerfil {
      * Se inicializa con un perfil predeterminado.
      */
     private void crearArchivoSiNoExiste() {
-        try {
-            File archivo = new File(ARCHIVO);
+    try {
+        File archivo = new File(ARCHIVO);
 
-            if (!archivo.exists()) {
-                archivo.createNewFile();
+        if (!archivo.exists()) {
+            Perfil predeterminado = crearPerfilPredeterminado();
 
-                // Guardar un perfil predeterminado
-                Perfil predeterminado = crearPerfilPredeterminado();
-
-                try (FileWriter writer = new FileWriter(archivo)) {
-                    gson.toJson(predeterminado, writer);
+            try (FileWriter writer = new FileWriter(archivo)) {
+                gson.toJson(predeterminado, writer);
             }
-            }
-
-        } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("Archivo perfil.json creado con un perfil predeterminado.");
+        } else {
+            System.out.println("El archivo perfil.json ya existe.");
         }
+
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
     }
 
     /**
