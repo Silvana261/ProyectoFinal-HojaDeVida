@@ -24,7 +24,7 @@ public interface IGestorHabilidad {
      * @param nombreViejo nombre viejo de la habilidad
      * @param nombreNuevo nombre nuevo de la habilidad
      */
-    void editarHabilidad(Habilidad h);
+    void editarHabilidad(String nombreViejo, String nombreNuevo);
 
     /**
      * Retorna la lista de todas las habilidades.

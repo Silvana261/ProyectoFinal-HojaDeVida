@@ -67,9 +67,8 @@ public class HabilidadServidor extends HttpServlet {
             gestor.agregarHabilidad(h);
 
         } else if ("editar".equals(accion) && nombre != null && nombreNuevo != null) {
-            // Solo manda la habilidad nueva al gestor
-            Habilidad hNueva = new Habilidad(nombreNuevo);
-            gestor.editarHabilidad(hNueva);
+            // Envía el nombre actual (nombre viejo) y el nuevo nombre al gestor
+            gestor.editarHabilidad(nombre, nombreNuevo);
 
         } else if ("eliminar".equals(accion) && nombre != null) {
             Habilidad h = new Habilidad(nombre);
