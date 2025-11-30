@@ -20,6 +20,9 @@
 </head>
 
 <body>
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="blob blob3"></div>
     <div class="container mt-5" style="max-width: 900px;">
         <div class="perfil-container">
             
@@ -71,7 +74,7 @@
             
                                 <!-- Botón Editar -->
                                 <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal"
-                                    data-bs-target="#editarHabilidadModal<%= h.getNombre().replaceAll(" \\s","") %>">
+                                    data-bs-target="#editarHabilidadModal<%= h.getNombre().replaceAll("\\s","") %>">
                                     <i class="bi bi-pencil"></i>
                                 </button>
             
@@ -86,8 +89,7 @@
                             </div>
             
                             <!-- Modal Editar Habilidad -->
-                            <div class="modal fade" id="editarHabilidadModal<%= h.getNombre().replaceAll(" \\s","") %>"
-                                tabindex="-1">
+                            <div class="modal fade" id="editarHabilidadModal<%= h.getNombre().replaceAll("\\s","") %>" tabindex="-1">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
