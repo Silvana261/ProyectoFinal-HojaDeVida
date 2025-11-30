@@ -42,11 +42,11 @@ public class PerfilRepositorio implements IRepositorioPerfil {
         perfil.setBio("Estudiante de Ingeniería de Sistemas apasionada por el desarrollo de software y la tecnología. Me gusta aprender nuevas herramientas, crear proyectos y seguir mejorando mis habilidades día a día.");
         perfil.setExperiencia("Actualmente estudiante universitaria. No cuento con experiencia laboral formal, pero he desarrollado proyectos académicos y personales relacionados con programación, estructuras de datos y desarrollo web.");
         perfil.setEmail("silvanasaavedra2006@gmail.com"); 
-        perfil.setFoto("/foto.jpg");
-        perfil.setBanner("img/banner_default.png");
+        perfil.setFoto("https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=400&fit=crop");
+        perfil.setBanner("https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&h=300&fit=crop");
 
        
-         List<Habilidad> habilidades = new ArrayList<>();
+        List<Habilidad> habilidades = new ArrayList<>();
         habilidades.add(new Habilidad("Programación en Java"));
         habilidades.add(new Habilidad("Desarrollo web básico (HTML,JSP)"));
         habilidades.add(new Habilidad("Fundamentos de bases de datos "));

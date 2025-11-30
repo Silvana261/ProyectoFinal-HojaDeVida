@@ -24,7 +24,7 @@ import jakarta.servlet.http.HttpServletResponse;
 public class PerfilServidor extends HttpServlet {
 
     
-    
+   
     private IGestorPerfil gestor = new GestorPerfil();
 
 
@@ -40,7 +40,7 @@ public class PerfilServidor extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         request.setAttribute("perfil", gestor.obtenerPerfil());
-        request.getRequestDispatcher("/src/main/webapp/index.jsp").forward(request, response);
+        request.getRequestDispatcher("index.jsp").forward(request, response);
     }
 
 
