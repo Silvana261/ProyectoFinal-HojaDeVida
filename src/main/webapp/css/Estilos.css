@@ -4,7 +4,7 @@
 }
 
 body {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #c7a0eb 0%, #a2f1a2 100%);
     min-height: 100vh;
     padding: 20px 0;
 }
@@ -79,7 +79,7 @@ body {
 }
 
 .section-title i {
-    color: #667eea;
+    color: #bfc7e7;
     font-size: 24px;
 }
 
@@ -102,7 +102,7 @@ body {
 }
 
 .skill-badge {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #9eaae0 0%, #625b69 100%);
     color: white;
     padding: 8px 16px;
     border-radius: 20px;
@@ -129,5 +129,5 @@ body {
 
 .btn-accion:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 5px 15px rgba(125, 240, 221, 0.4);
 }
