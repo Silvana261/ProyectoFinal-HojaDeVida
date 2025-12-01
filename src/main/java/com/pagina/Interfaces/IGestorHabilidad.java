@@ -15,13 +15,14 @@ public interface IGestorHabilidad {
 
     /**
      * Elimina una habilidad existente del gestor.
-     * @param h la habilidad a eliminar
+     * @param nombre nombre habilidad a eliminar
      */
     void eliminarHabilidad(Habilidad h);
 
     /**
      * Edita una habilidad existente.
-     * @param h la habilidad con los nuevos datos
+     * @param nombreViejo nombre viejo de la habilidad
+     * @param nombreNuevo nombre nuevo de la habilidad
      */
     void editarHabilidad(Habilidad h);
 

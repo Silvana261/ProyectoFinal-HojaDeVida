@@ -120,4 +120,3 @@ public class GestorPerfil implements IGestorPerfil {
         return repositorioPerfil.obtener();
     }
 }
-

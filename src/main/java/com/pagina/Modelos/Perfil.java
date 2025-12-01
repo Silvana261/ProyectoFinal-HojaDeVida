@@ -1,4 +1,5 @@
 package com.pagina.Modelos;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -17,7 +18,7 @@ public class Perfil {
      * Constructor vacío por defecto
      */
     public Perfil (){
-
+        this.habilidades = new ArrayList<>();
     }
 
     /**
@@ -97,4 +98,3 @@ public class Perfil {
         this.banner = banner;
     }
 }
-
