@@ -6,6 +6,7 @@
 <%
     Perfil perfil = (Perfil) request.getAttribute("perfil");
     List<Habilidad> habilidades = perfil.getHabilidades();
+    
 %>
 
 <!DOCTYPE html>
@@ -161,6 +162,11 @@
                             <input type="hidden" name="accion" value="editarEmail">
                             <input type="email" name="email" class="form-control" value="<%= perfil.getEmail() %>" required>
                         </div>
+                        <div class="mb-3">
+                            <label class="form-label">Experiencia</label>
+                            <textarea name="experiencia" class="form-control" rows="4"><%= perfil.getExperiencia() %></textarea>
+                        </div>
+
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
