@@ -4,10 +4,18 @@
 }
 
 body {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(
+           135deg,
+        #faafd4 0%,    
+        #fc9cca 35%,  
+        #9ef4cc 65%,   
+        #9ffcd0 100%   
+
+    );
     min-height: 100vh;
     padding: 20px 0;
 }
+
 
 .perfil-container {
     background: white;
@@ -71,7 +79,7 @@ body {
 .section-title {
     font-size: 20px;
     font-weight: 600;
-    color: #2c3e50;
+    color: #2c503c;
     margin-bottom: 15px;
     display: flex;
     align-items: center;
@@ -79,7 +87,7 @@ body {
 }
 
 .section-title i {
-    color: #667eea;
+    color: #5fffb5;
     font-size: 24px;
 }
 
@@ -90,7 +98,7 @@ body {
 }
 
 .experiencia-text {
-    color: #555;
+    color: #555555;
     line-height: 1.6;
     font-size: 15px;
 }
@@ -102,7 +110,7 @@ body {
 }
 
 .skill-badge {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #9eaae0 0%, #625b69 100%);
     color: white;
     padding: 8px 16px;
     border-radius: 20px;
@@ -125,9 +133,11 @@ body {
     font-weight: 500;
     transition: all 0.3s ease;
     border: none;
+    background-color: #8c73d2; /* Morado claro */
+    color: #ffffff;
 }
 
 .btn-accion:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    background-color: #9373f5; /* Un poco más oscuro */
 }
+
