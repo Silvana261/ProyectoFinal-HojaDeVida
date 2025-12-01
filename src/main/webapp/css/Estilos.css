@@ -17,14 +17,16 @@ body {
 }
 
 
+/* CONTENEDOR PRINCIPAL */
 .perfil-container {
-    background: white;
+    background: #ffffff;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     margin-bottom: 30px;
 }
 
+/* BANNER */
 .banner {
     width: 100%;
     height: 160px;
@@ -32,18 +34,19 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    
 }
 
+/* FOTO PERFIL */
 .foto-perfil {
     width: 180px;
     height: 180px;
     border-radius: 50%;
-    border: 8px solid rgb(172, 247, 137);
+    border: 8px solid #b9fbc0; /* verde claro */
     margin-top: -15px;
-    background-color: #c1fcc9;
+    background-color: #e0ffe8;
 }
 
+/* INFO PRINCIPAL */
 .info-header {
     padding: 20px 30px;
     text-align: center;
@@ -51,22 +54,17 @@ body {
 
 .info-header h1 {
     margin: 20px 0 10px;
-    color: #2c3e50;
+    color: #2c2c2c;
     font-weight: 700;
 }
 
-.info-header p {
-    color: #667eea;
-    font-size: 16px;
-    margin: 5px 0;
-}
-
-.email-info {
-    color: #666;
+.info-header p, .email-info {
+    color: #555555;
     font-size: 14px;
     margin-top: 10px;
 }
 
+/* SECCIONES */
 .section {
     padding: 30px;
     border-bottom: 1px solid #e9ecef;
@@ -79,7 +77,7 @@ body {
 .section-title {
     font-size: 20px;
     font-weight: 600;
-    color: #2c503c;
+    color: #333333;
     margin-bottom: 15px;
     display: flex;
     align-items: center;
@@ -87,22 +85,18 @@ body {
 }
 
 .section-title i {
-    color: #5fffb5;
+    color: #ffb3c6; /* rosa suave */
     font-size: 24px;
 }
 
-.bio-text {
-    color: #555;
+/* TEXTOS */
+.bio-text, .experiencia-text {
+    color: #2c2c2c;
     line-height: 1.6;
     font-size: 15px;
 }
 
-.experiencia-text {
-    color: #555555;
-    line-height: 1.6;
-    font-size: 15px;
-}
-
+/* HABILIDADES */
 .habilidades-list {
     display: flex;
     flex-wrap: wrap;
@@ -110,8 +104,8 @@ body {
 }
 
 .skill-badge {
-    background: linear-gradient(135deg, #9eaae0 0%, #625b69 100%);
-    color: white;
+    background: linear-gradient(135deg, #baa1e1 0%, #fea6bc 100%); /* morado claro → rosa */
+    color: #ffffff; /* letra blanca */
     padding: 8px 16px;
     border-radius: 20px;
     font-size: 14px;
@@ -119,6 +113,7 @@ body {
     display: inline-block;
 }
 
+/* BOTONES ACCIÓN */
 .botones-accion {
     display: flex;
     flex-wrap: wrap;
@@ -133,11 +128,11 @@ body {
     font-weight: 500;
     transition: all 0.3s ease;
     border: none;
-    background-color: #8c73d2; /* Morado claro */
-    color: #ffffff;
+    background-color: #b9a0e1; /* morado claro */
+    color: #ffffff; /* letra blanca */
 }
 
 .btn-accion:hover {
-    background-color: #9373f5; /* Un poco más oscuro */
+    background: linear-gradient(135deg, #adf9b5, #ffa0b8); /* verde claro → rosa */
+    color: #ffffff;
 }
-
