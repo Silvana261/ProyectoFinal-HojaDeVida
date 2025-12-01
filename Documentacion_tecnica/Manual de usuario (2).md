@@ -22,7 +22,8 @@ Antes de empezar, asegúrate de tener instalados:
 ## Funcionalidades:
 
 1. El botón “Editar Perfil” te permitirá modificar el nombre, biografía, email, experiencia, banner y foto de perfil, luego haces clic en guardar cambios para que se almacenen en el perfil.json  
-2. El botón “Agregar Habilidad” te permité ingresar el nombre de una nueva habilidad 
+2. El botón “Agregar Habilidad” te permité ingresar el nombre de una nueva habilidad
+3. Los íconos al lado de cada habilidad son para editar y eliminar la habilidad respectiva
 
 Cada que hagas un cambio, recuerda refrescar la página
 
