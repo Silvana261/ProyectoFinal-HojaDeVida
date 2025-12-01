@@ -6,6 +6,7 @@
 <%
     Perfil perfil = (Perfil) request.getAttribute("perfil");
     List<Habilidad> habilidades = perfil.getHabilidades();
+    
 %>
 
 <!DOCTYPE html>
@@ -20,6 +21,7 @@
 </head>
 
 <body>
+    
     <div class="container mt-5" style="max-width: 900px;">
         <div class="perfil-container">
             
@@ -71,7 +73,7 @@
             
                                 <!-- Botón Editar -->
                                 <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal"
-                                    data-bs-target="#editarHabilidadModal<%= h.getNombre().replaceAll(" \\s","") %>">
+                                    data-bs-target="#editarHabilidadModal<%= h.getNombre().replaceAll("\\s","") %>">
                                     <i class="bi bi-pencil"></i>
                                 </button>
             
@@ -86,8 +88,7 @@
                             </div>
             
                             <!-- Modal Editar Habilidad -->
-                            <div class="modal fade" id="editarHabilidadModal<%= h.getNombre().replaceAll(" \\s","") %>"
-                                tabindex="-1">
+                            <div class="modal fade" id="editarHabilidadModal<%= h.getNombre().replaceAll("\\s","") %>" tabindex="-1">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
@@ -161,6 +162,11 @@
                             <input type="hidden" name="accion" value="editarEmail">
                             <input type="email" name="email" class="form-control" value="<%= perfil.getEmail() %>" required>
                         </div>
+                        <div class="mb-3">
+                            <label class="form-label">Experiencia</label>
+                            <textarea name="experiencia" class="form-control" rows="4"><%= perfil.getExperiencia() %></textarea>
+                        </div>
+
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
