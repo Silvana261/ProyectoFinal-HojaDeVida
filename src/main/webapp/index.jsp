@@ -137,45 +137,104 @@
         </div>
     </div>
     
-    <!-- MODAL: Editar Perfil -->
     <div class="modal fade" id="editarPerfilModal" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Editar Perfil</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <form action="perfil" method="POST">
-                    <div class="modal-body">
-                        <div class="mb-3">
-                            <label class="form-label">Nombre</label>
-                            <input type="hidden" name="accion" value="editarNombre">
-                            <input type="text" name="nombre" class="form-control" value="<%= perfil.getNombre() %>" required>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Biografía</label>
-                            <input type="hidden" name="accion" value="editarBio">
-                            <textarea name="bio" class="form-control" rows="3"><%= perfil.getBio() %></textarea>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Email</label>
-                            <input type="hidden" name="accion" value="editarEmail">
-                            <input type="email" name="email" class="form-control" value="<%= perfil.getEmail() %>" required>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Experiencia</label>
-                            <textarea name="experiencia" class="form-control" rows="4"><%= perfil.getExperiencia() %></textarea>
-                        </div>
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                        <button type="submit" class="btn btn-primary">Guardar</button>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Editar Perfil</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                
+                <!-- Formulario: Editar Nombre -->
+                <form action="perfil" method="POST" class="mb-3">
+                    <input type="hidden" name="accion" value="editarNombre">
+                    <label class="form-label">Nombre</label>
+                    <div class="input-group">
+                        <input type="text" name="nombre" class="form-control" 
+                               value="<%= perfil.getNombre() %>" required>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="bi bi-check"></i>
+                        </button>
                     </div>
                 </form>
+
+                <hr>
+
+                <!-- Formulario: Editar Biografía -->
+                <form action="perfil" method="POST" class="mb-3">
+                    <input type="hidden" name="accion" value="editarBio">
+                    <label class="form-label">Biografía</label>
+                    <textarea name="bio" class="form-control mb-2" rows="3"><%= perfil.getBio() %></textarea>
+                    <button type="submit" class="btn btn-primary btn-sm">
+                        <i class="bi bi-check"></i> Guardar Bio
+                    </button>
+                </form>
+
+                <hr>
+
+                <!-- Formulario: Editar Email -->
+                <form action="perfil" method="POST" class="mb-3">
+                    <input type="hidden" name="accion" value="editarEmail">
+                    <label class="form-label">Email</label>
+                    <div class="input-group">
+                        <input type="email" name="email" class="form-control" 
+                               value="<%= perfil.getEmail() %>" required>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="bi bi-check"></i>
+                        </button>
+                    </div>
+                </form>
+
+                <hr>
+
+                <!-- Formulario: Editar Experiencia -->
+                <form action="perfil" method="POST" class="mb-3">
+                    <input type="hidden" name="accion" value="editarExperiencia">
+                    <label class="form-label">Experiencia</label>
+                    <textarea name="experiencia" class="form-control mb-2" rows="4"><%= perfil.getExperiencia() %></textarea>
+                    <button type="submit" class="btn btn-primary btn-sm">
+                        <i class="bi bi-check"></i> Guardar Experiencia
+                    </button>
+                </form>
+
+                <hr>
+
+                <!-- Formulario: Editar Foto de Perfil -->
+                <form action="perfil" method="POST" class="mb-3">
+                    <input type="hidden" name="accion" value="editarFoto">
+                    <label class="form-label">URL Foto de Perfil</label>
+                    <div class="input-group">
+                        <input type="url" name="fotoPerfil" class="form-control" 
+                               value="<%= perfil.getFoto() %>" placeholder="https://...">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="bi bi-check"></i>
+                        </button>
+                    </div>
+                </form>
+
+                <hr>
+
+                <!-- Formulario: Editar Banner -->
+                <form action="perfil" method="POST">
+                    <input type="hidden" name="accion" value="editarBanner">
+                    <label class="form-label">URL Banner</label>
+                    <div class="input-group">
+                        <input type="url" name="banner" class="form-control" 
+                               value="<%= perfil.getBanner() %>" placeholder="https://...">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="bi bi-check"></i>
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
             </div>
         </div>
     </div>
+</div>
     
     <!-- MODAL: Agregar Habilidad -->
     <div class="modal fade" id="agregarHabilidadModal" tabindex="-1">

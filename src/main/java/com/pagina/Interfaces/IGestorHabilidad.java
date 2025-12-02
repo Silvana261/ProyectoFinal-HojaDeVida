@@ -23,7 +23,7 @@ public interface IGestorHabilidad {
      * Edita una habilidad existente.
      * @param h la habilidad con los nuevos datos
      */
-    void editarHabilidad(Habilidad h);
+    void editarHabilidad(nombreAntiguo,nombreNuevo);
 
     /**
      * Retorna la lista de todas las habilidades.
