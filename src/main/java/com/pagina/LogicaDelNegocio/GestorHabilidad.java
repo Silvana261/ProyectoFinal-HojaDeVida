@@ -61,25 +61,6 @@ public class GestorHabilidad implements IGestorHabilidad {
             repositorio.guardar(perfil);
         }
     }
-
-    @Override
-    public void editarHabilidad(Habilidad h) {
-        // Este método ya no se usa correctamente, mantenerlo por compatibilidad
-        Perfil perfil = repositorio.obtener();
-        
-        if (perfil.getHabilidades() != null) {
-            List<Habilidad> habilidades = perfil.getHabilidades();
-            for (int i = 0; i < habilidades.size(); i++) {
-                Habilidad actual = habilidades.get(i);
-                if (actual.getNombre() != null && actual.getNombre().equals(h.getNombre())) {
-                    habilidades.set(i, h);
-                    break;
-                }
-            }
-            repositorio.guardar(perfil);
-        }
-    }
-
     @Override
     public List<Habilidad> listarHabilidades() {
         Perfil perfil = repositorio.obtener();
