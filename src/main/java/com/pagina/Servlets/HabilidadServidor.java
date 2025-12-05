@@ -33,28 +33,17 @@ public class HabilidadServidor extends HttpServlet {
         String nombre = request.getParameter("nombre");
         String nombreNuevo = request.getParameter("nombreNuevo");
 
-        System.out.println("========== DEBUG HABILIDADES ==========");
-        System.out.println("Acción: " + accion);
-        System.out.println("Nombre: " + nombre);
-        System.out.println("Nombre Nuevo: " + nombreNuevo);
-
         if ("agregar".equals(accion) && nombre != null && !nombre.isEmpty()) {
             Habilidad h = new Habilidad(nombre);
             gestor.agregarHabilidad(h);
-            System.out.println("Habilidad agregada: " + nombre);
 
         } else if ("editar".equals(accion) && nombre != null && nombreNuevo != null) {
-            // CORREGIDO: Usar el nombre antiguo para buscar y el nuevo para actualizar
             gestor.editarHabilidad(nombre, nombreNuevo);
-            System.out.println("Habilidad editada: " + nombre + " -> " + nombreNuevo);
 
         } else if ("eliminar".equals(accion) && nombre != null) {
             Habilidad h = new Habilidad(nombre);
             gestor.eliminarHabilidad(h);
-            System.out.println("Habilidad eliminada: " + nombre);
         }
-
-        System.out.println("=======================================");
 
         // Redirigir al perfil
         response.sendRedirect("perfil");

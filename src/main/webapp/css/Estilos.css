@@ -6,10 +6,10 @@
 body {
     background: linear-gradient(
            135deg,
-        #faafd4 0%,    
-        #fc9cca 35%,  
-        #9ef4cc 65%,   
-        #9ffcd0 100%   
+        #F9DFDF 0%,    
+        #F5AFAF 35%,  
+        #C599B6 65%,   
+        #E5D9F2 100%   
 
     );
     min-height: 100vh;
@@ -41,7 +41,7 @@ body {
     width: 180px;
     height: 180px;
     border-radius: 50%;
-    border: 8px solid #b9fbc0; /* verde claro */
+    border: 8px solid #DEBACE;
     margin-top: -15px;
     background-color: #e0ffe8;
 }
@@ -104,7 +104,7 @@ body {
 }
 
 .skill-badge {
-    background: linear-gradient(135deg, #baa1e1 0%, #fea6bc 100%); /* morado claro → rosa */
+    background: linear-gradient(135deg, #baa1e1 0%, #fea6bc 100%); /* morado claro -> rosa */
     color: #ffffff; /* letra blanca */
     padding: 8px 16px;
     border-radius: 20px;
@@ -128,11 +128,11 @@ body {
     font-weight: 500;
     transition: all 0.3s ease;
     border: none;
-    background-color: #b9a0e1; /* morado claro */
+    background-color: #b9a0e1; /* Morado */
     color: #ffffff; /* letra blanca */
 }
 
 .btn-accion:hover {
-    background: linear-gradient(135deg, #adf9b5, #ffa0b8); /* verde claro → rosa */
+    background: linear-gradient(135deg, #CDC1FF, #F5AFAF); /* lila -> Rosa claro */
     color: #ffffff;
 }
