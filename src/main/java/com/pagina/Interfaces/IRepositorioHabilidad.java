@@ -18,4 +18,9 @@ public interface IRepositorioHabilidad {
      * @param habilidades la lista de habilidades
      */
     void guardar(List<Habilidad> habilidades);
+
+    /**
+     * Cierra la conexión 
+     */
+    public void cerrarConexion();
 }
