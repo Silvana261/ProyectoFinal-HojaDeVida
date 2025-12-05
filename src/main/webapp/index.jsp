@@ -245,7 +245,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <form action="habilidades" method="POST">
-                <input type="hidden" name="accion" value="agregar">  <!-- ⬅️ AGREGAR ESTO -->
+                <input type="hidden" name="accion" value="agregar">
                 <div class="modal-body">
                     <div class="mb-3">
                         <label class="form-label">Nombre de la Habilidad</label>
