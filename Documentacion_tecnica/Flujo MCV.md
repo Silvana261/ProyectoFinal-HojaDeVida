@@ -6,7 +6,8 @@
 
 2. ## El controlador recibe la petición
 
-   Los controladores, implementados como servlets en java, actúan como recepcionistas de la aplicación. Recibe la petición HTTP del usuario y analiza que acción debe realizar. Estos son PerfilServidor y HabilidadServidor  
+   Los controladores, implementados como servlets en java, actúan como recepcionistas de la aplicación. Recibe la petición HTTP del usuario y analiza que acción debe realizar. Estos son:
+   InicioServidor (Se encarga de redireccionar la página a los servidores correctos),PerfilServidor y HabilidadServidor  
    
 
 3. ## El controlador coordina con el modelo
@@ -16,7 +17,8 @@
 
 4. ## Persistencia de datos
 
-   Los repositorios como RepositorioPerfil y RepositorioHabilidad se encargan de guardar y recuperar la información desde el almacenamiento JSON
+   Los repositorios como RepositorioPerfil y RepositorioHabilidad se encargan de guardar y recuperar la información desde la base de datos MongoDB.
+   Estos repositorios actúan como la capa de acceso a datos dentro del flujo MVC, encargándose de comunicar el modelo con la base de datos.
 
 5. ## Retorno al controlador
 
