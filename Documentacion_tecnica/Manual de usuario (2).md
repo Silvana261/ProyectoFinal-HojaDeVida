@@ -16,7 +16,7 @@ Antes de empezar, asegúrate de tener instalados:
 1. Abrir el proyecto en un IDE (se recomienda usar VS code)
 2. Añadir el proyecto a Tomcat. (En caso de ser VS code, se debe añadir Tomcat como server y en “add deployment” agregar el archivo hojadevida.war)  
 3. Empezar el servidor (clic -> start)
-4. Una vez que Tomcat esté listo, abre la página en el navegador y accede a [http://localhost:8080/hojadevida/](http://localhost:8080/hojadevida/)  
+4. Una vez que Tomcat esté listo, abre la página en el navegador y accede a [http://localhost:8080/hojadevida/](http://localhost:8080/hojadevida/perfil)  
 5. Listo\! Ya se debe ver la hoja de vida
 
 **Aclaración:** Si va a realizar cambios al código, dirigase a la pestaña de Maven y dentro de sus comandos seleccione primero clean para asegurarse que la próxima compilación que realice sea nueva. Luego, debe seleccionar deploy.
