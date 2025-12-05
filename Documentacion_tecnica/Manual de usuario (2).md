@@ -19,7 +19,7 @@ Antes de empezar, asegúrate de tener instalados:
 4. Una vez que Tomcat esté listo, abre la página en el navegador y accede a [http://localhost:8080/hojadevida/](http://localhost:8080/hojadevida/perfil)  
 5. Listo\! Ya se debe ver la hoja de vida
 
-**Aclaración:** Si va a realizar cambios al código, dirigase a la pestaña de Maven y dentro de sus comandos seleccione primero clean para asegurarse que la próxima compilación que realice sea nueva. Luego, debe seleccionar deploy.
+**Aclaración:** Si vas a realizar cambios al código, dirigete a la pestaña de Maven y dentro de sus comandos selecciona primero "clean" para asegurarse que la próxima compilación que realice sea nueva. Luego, debes seleccionar "deploy".
      
    
 
