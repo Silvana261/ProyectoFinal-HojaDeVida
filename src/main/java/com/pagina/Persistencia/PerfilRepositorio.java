@@ -27,7 +27,7 @@ public class PerfilRepositorio implements IRepositorioPerfil {
     private MongoCollection<Document> collection;
 
     /**
-     * Constructor que inicializa la conexión a MongoDB y asegura la existencia del perfil.
+     * Constructor que inicializa la conexión a MongoDB y asegura la existencia del perfil
      */
     public PerfilRepositorio() {
         try {
@@ -41,9 +41,10 @@ public class PerfilRepositorio implements IRepositorioPerfil {
     }
 
     /**
-     * Crea un perfil predeterminado básico.
+     * Crea un perfil predeterminado básico
      */
-    private Perfil crearPerfilPredeterminado() {
+    @Override
+    public Perfil crearPerfilPredeterminado() {
         Perfil perfil = new Perfil();
         
         perfil.setNombre("Silvana Saavedra");
@@ -66,9 +67,10 @@ public class PerfilRepositorio implements IRepositorioPerfil {
     }
 
     /**
-     * Crea el perfil en MongoDB si no existe.
+     * Crea el perfil en MongoDB si no existe
      */
-    private void crearPerfilSiNoExiste() {
+    @Override
+    public void crearPerfilSiNoExiste() {
         try {
             Document query = new Document("_id", PERFIL_ID);
             Document perfilDoc = collection.find(query).first();
@@ -83,9 +85,10 @@ public class PerfilRepositorio implements IRepositorioPerfil {
     }
 
     /**
-     * Convierte un objeto Perfil a un Document de MongoDB.
+     * Convierte un objeto Perfil a un Document de MongoDB
      */
-    private Document perfilADocument(Perfil perfil) {
+    @Override
+    public Document perfilADocument(Perfil perfil) {
         Document doc = new Document("_id", PERFIL_ID)
             .append("nombre", perfil.getNombre())
             .append("bio", perfil.getBio())
@@ -107,9 +110,10 @@ public class PerfilRepositorio implements IRepositorioPerfil {
     }
 
     /**
-     * Convierte un Document de MongoDB a un objeto Perfil.
+     * Convierte un Document de MongoDB a un objeto Perfil
      */
-    private Perfil documentAPerfil(Document doc) {
+    @Override
+    public Perfil documentAPerfil(Document doc) {
         if (doc == null) return null;
 
         Perfil perfil = new Perfil();
@@ -152,8 +156,8 @@ public class PerfilRepositorio implements IRepositorioPerfil {
     }
 
     /**
-     * Obtiene el perfil almacenado en MongoDB.
-     * Si no existe o hay un error, retorna un Perfil predeterminado.
+     * Obtiene el perfil almacenado en MongoDB
+     * Si no existe o hay un error, retorna un Perfil predeterminado
      * @return Perfil cargado desde MongoDB o un Perfil predeterminado
      */
     @Override
@@ -186,9 +190,10 @@ public class PerfilRepositorio implements IRepositorioPerfil {
     }
 
     /**
-     * Cierra la conexión con MongoDB.
-     * Debe llamarse cuando ya no se necesite el repositorio.
+     * Cierra la conexión con MongoDB
+     * Debe llamarse cuando ya no se necesite el repositorio
      */
+    @Override
     public void cerrarConexion() {
         if (mongoClient != null) {
             mongoClient.close();

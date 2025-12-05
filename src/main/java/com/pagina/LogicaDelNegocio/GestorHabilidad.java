@@ -1,6 +1,7 @@
 package com.pagina.LogicaDelNegocio;
 
 import com.pagina.Interfaces.IGestorHabilidad;
+import com.pagina.Interfaces.IRepositorioPerfil;
 import com.pagina.Modelos.Habilidad;
 import com.pagina.Modelos.Perfil;
 import com.pagina.Persistencia.PerfilRepositorio;
@@ -13,7 +14,7 @@ import java.util.List;
  */
 public class GestorHabilidad implements IGestorHabilidad {
 
-    private PerfilRepositorio repositorio = new PerfilRepositorio();
+    private IRepositorioPerfil repositorio = new PerfilRepositorio();
 
     @Override
     public void agregarHabilidad(Habilidad h) {
