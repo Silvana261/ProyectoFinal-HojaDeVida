@@ -9,7 +9,7 @@ import com.pagina.Modelos.Habilidad;
 import org.bson.Document;
 import java.util.ArrayList;
 import java.util.List;
-import static com.mongodb.client.model.Filters.eq;
+
 
 public class HabilidadRepositorio implements IRepositorioHabilidad {
 
@@ -71,6 +71,7 @@ public class HabilidadRepositorio implements IRepositorioHabilidad {
      * Cierra la conexión con MongoDB.
      * Debe llamarse cuando ya no se necesite el repositorio.
      */
+    @Override
     public void cerrarConexion() {
         if (mongoClient != null) {
             mongoClient.close();
